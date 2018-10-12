@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#69079e</color>
+    <color name="colorPrimaryDark">#560583</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_blue">#2609e1</color>
+    <color name="color_blue_light">#097cc4</color>
+    <color name="color_gray">#e6e5e5</color>
+    <color name="color_ar">#ab077f</color>
+    <color name="color_green">#037e0d</color>
+    <color name="color_green_light">#46c620</color>
+    <color name="color_black">#000</color>
+    <color name="color_red">#cf071f</color>
+
+    <color name="color_orange">#e17411</color>
+    <color name="color_gray_dark">#646464</color>
+    <color name="color_white">#ffffff</color>
+    <color name="line">#20000000</color>
+
+    <color name="edit_base">#000</color>
+    <color name="edit_primary">#e44bb6</color>
+    <color name="edit_error">#e1d555</color>
+    <color name="edit_white">#ffffff</color>
+    <color name="edit_hint">#868686</color>
+
+    <color name="color_rvl_main">#71168c</color>
+
+    <color name="color_rvl_present">#034e1a</color>
+    <color name="color_rvl_abs">#990621</color>
+    <color name="color_rvl_total">#6e0d9b</color>
+    <color name="color_rvl_mor">#93051f</color>
+    <color name="color_rvl_mam">#2043a3</color>
+
+    <color name="color_rvl_com">#f40b74</color>
+
+    <color name="omrani_total">#f7990d</color>
+    <color name="jari_total">#1193b7</color>
+
+    <color name="omrani_alloc">#f7990d</color>
+    <color name="jari_alloc">#1193b7</color>
+
+    <color name="omrani_commit">#f7990d</color>
+    <color name="jari_commit">#1193b7</color>
+
+    <color name="transperent">#00000000</color>
+
+    <color name="color_ok">#15973c</color>
+    <color name="color_cancel">#ef3071</color>
+
+    <array name="colors">
+        <item>#da092f</item>
+        <item>#6209df</item>
+        <item>#22af56</item>
+        <item>#c29415</item>
+        <item>#a109a9</item>
+        <item>#730c48</item>
+    </array>
+
+</resources>

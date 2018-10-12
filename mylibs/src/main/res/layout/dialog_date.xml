@@ -1,0 +1,69 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" android:gravity="center_horizontal">
+        <NumberPicker
+                android:id="@+id/number_picker_year"
+                android:theme="@style/DefaultNumberPickerTheme"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:divider="@color/colorPrimaryDark"
+        />
+
+        <NumberPicker
+                android:id="@+id/number_picker_month"
+                android:theme="@style/DefaultNumberPickerTheme"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <NumberPicker
+                android:id="@+id/number_picker_day"
+                android:theme="@style/DefaultNumberPickerTheme"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="15dp"
+            android:orientation="horizontal" android:gravity="bottom">
+
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="انصراف"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:id="@+id/dialog_date_btnCancel"
+                android:layout_alignParentBottom="true" />
+
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="تایید"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:textSize="18sp"
+                 android:textColor="#fff"
+                android:id="@+id/dialog_date_btnOk" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
