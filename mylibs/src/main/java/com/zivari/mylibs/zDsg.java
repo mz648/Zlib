@@ -11,9 +11,7 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import java.math.BigInteger;
-
-public class clsDsg {
+public class zDsg {
 
 
     public static void setFace_textview( Activity activity,String font, TextView...pTxt)
@@ -30,7 +28,7 @@ public class clsDsg {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
 
     }
@@ -45,7 +43,7 @@ public class clsDsg {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
     }
 
@@ -59,7 +57,7 @@ public class clsDsg {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
     }
 
@@ -76,7 +74,7 @@ public class clsDsg {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
 
     }
@@ -94,7 +92,7 @@ public class clsDsg {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
 
     }
@@ -123,7 +121,7 @@ public class clsDsg {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
 
     }

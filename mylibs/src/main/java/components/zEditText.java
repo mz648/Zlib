@@ -8,28 +8,27 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 import com.zivari.mylibs.R;
 
-public class myTextView extends android.support.v7.widget.AppCompatTextView {
+public class zEditText extends android.support.v7.widget.AppCompatEditText {
     String [] font_arr=new String[]{"iranyekan_regular","IranSans","BYekan","CasablancaHeavy"};
-    public myTextView(Context context) {
+    public zEditText(Context context) {
         super(context);
         init(null);
     }
 
-    public myTextView(Context context, @Nullable AttributeSet attrs) {
+    public zEditText(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public myTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public zEditText(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(attrs);
     }
 
-//    public myTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+//    public myEditText(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
 //        super(context, attrs, defStyleAttr, defStyleRes);
 //    }
 
@@ -37,7 +36,7 @@ public class myTextView extends android.support.v7.widget.AppCompatTextView {
 
         if(attrs!=null){
 
-           TypedArray typedArray=getContext().obtainStyledAttributes(attrs, R.styleable.myTextView);
+           TypedArray typedArray=getContext().obtainStyledAttributes(attrs, R.styleable.zEditText);
 
            attr_font(typedArray);
            attr_radius(typedArray);
@@ -48,7 +47,7 @@ public class myTextView extends android.support.v7.widget.AppCompatTextView {
 
     void attr_font(TypedArray typedArray){
 
-        int index=typedArray.getInt(R.styleable.myTextView_font_name,0);
+        int index=typedArray.getInt(R.styleable.zEditText_edt_font_name,0);
         String fontName=font_arr[index];
 
         Typeface typeface=Typeface.createFromAsset(getContext().getAssets(),"fonts/"+fontName+".ttf");
@@ -57,12 +56,12 @@ public class myTextView extends android.support.v7.widget.AppCompatTextView {
     }
     void attr_radius(TypedArray typedArray){
 
-        boolean set_radius=typedArray.getBoolean(R.styleable.myTextView_set_radius,false);
+        boolean set_radius=typedArray.getBoolean(R.styleable.zEditText_edt_set_radius,false);
         if(!set_radius)
             return;
 
-        int radius=typedArray.getInt(R.styleable.myTextView_radius,10);
-        int color=typedArray.getColor(R.styleable.myTextView_radius_color,getResources().getColor(R.color.colorPrimary));
+        int radius=typedArray.getInt(R.styleable.zEditText_edt_radius,10);
+        int color=typedArray.getColor(R.styleable.zEditText_edt_radius_color,getResources().getColor(R.color.colorPrimary));
 
         GradientDrawable gd = new GradientDrawable();
         gd.setColor(color);

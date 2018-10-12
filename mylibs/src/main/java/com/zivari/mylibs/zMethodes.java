@@ -3,51 +3,32 @@ package com.zivari.mylibs;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.opengl.ETC1Util;
-import android.os.Handler;
-import android.support.v7.app.AlertDialog;
 import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import com.afollestad.materialdialogs.MaterialDialog;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.math.BigInteger;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
 
-public class clsMethodes {
+public class zMethodes {
 
 
     public static ArrayList<HashMap<String, String>> my_json(String result)  {
@@ -135,7 +116,7 @@ public class clsMethodes {
         callIntent.setData(Uri.parse("tel:" + number));
         callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //        if (ActivityCompat.checkSelfPermission(clsVars_foods.activity, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-//           clsMsg.msg_toast("لطفا دسترسی به تماس را فعال نمایید");
+//           zMsg.msg_toast("لطفا دسترسی به تماس را فعال نمایید");
 //            return;
 //        }
         activity.startActivity(callIntent);
@@ -176,7 +157,7 @@ public class clsMethodes {
         else
         {
 //            Toast.makeText(activity,"اینترنت قطع می باشد",Toast.LENGTH_LONG).show();
-            clsMsg.msg_toast(activity,"اینترنت قطع می باشد");
+            zMsg.msg_toast(activity,true,"اینترنت قطع می باشد");
         }
 
         return connect;
@@ -187,7 +168,7 @@ public class clsMethodes {
     public static boolean checkNet2(Activity activity){
 
         boolean connect=false;
-        HttpsTrustManager.allowAllSSL();
+        zHttpsTrustManager.allowAllSSL();
         ConnectivityManager connectivityManager=(ConnectivityManager)activity.getSystemService(Context.CONNECTIVITY_SERVICE);
 
         if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState()== NetworkInfo.State.CONNECTED
@@ -246,7 +227,7 @@ public class clsMethodes {
             }
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
 
     }
@@ -306,10 +287,10 @@ public class clsMethodes {
             buf.close();
         }
         catch (FileNotFoundException e) {
-            clsMsg.msg_toast(activity,e.getMessage());
+            zMsg.msg_toast(activity,true,e.getMessage());
         }
         catch (IOException e) {
-            clsMsg.msg_toast(activity,e.getMessage());
+            zMsg.msg_toast(activity,true,e.getMessage());
         }
 
         String base64=Base64.encodeToString(bytes,Base64.DEFAULT);

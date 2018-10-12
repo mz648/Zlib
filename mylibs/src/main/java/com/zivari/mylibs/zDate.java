@@ -20,7 +20,7 @@ import java.util.Date;
 
 import saman.zamani.persiandate.PersianDate;
 
-public class clsDate {
+public class zDate {
 
     public static String getDate_now(){
 
@@ -104,7 +104,7 @@ public class clsDate {
 
                     date=String.valueOf(y)+"/"+String.format("%02d",m)+"/"+String.format("%02d",d);
 //                    if(date_diff(date_now,date)<0){
-//                        clsMsg.msg_toast(activity,"تاریخ اعتبار باید بزرگتر از تاریخ جاری باشد");
+//                        zMsg.msg_toast(activity,"تاریخ اعتبار باید بزرگتر از تاریخ جاری باشد");
 //                        return;
 //                    }
                     txtDate.setText(date);
@@ -121,12 +121,12 @@ public class clsDate {
                 }
             });
 
-            clsDsg.setFace_button(activity, clsDsg.fonts.iran_sans,btnCancel,btnOK);
+            zDsg.setFace_button(activity, zDsg.fonts.iran_sans,btnCancel,btnOK);
             dialog_date.show();
 
         }
         catch (Exception ex){
-            clsMsg.msg_toast(activity,ex.getMessage().toString());
+            zMsg.msg_toast(activity,true,ex.getMessage().toString());
         }
     }
 
@@ -215,7 +215,7 @@ public class clsDate {
         int hour,minute;
 //        String []time=new String[2];
 //        time=edt_time.getText().toString().split(":");
-//        hour=clsMethodes.integer_tryparse(time[0]);
+//        hour=zMethodes.integer_tryparse(time[0]);
 //        minute=new Integer(time[1]);
         hour=0;
         minute=0;
@@ -245,9 +245,9 @@ public class clsDate {
 
         if(temp.length!=3)
             return "";
-        y= clsMath.integer_tryparse(temp[0]);
-        m= clsMath.integer_tryparse(temp[1]);
-        d= clsMath.integer_tryparse(temp[2]);
+        y= zMath.integer_tryparse(temp[0]);
+        m= zMath.integer_tryparse(temp[1]);
+        d= zMath.integer_tryparse(temp[2]);
 
         PersianDate persian_date = new PersianDate();
 

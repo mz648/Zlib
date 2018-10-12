@@ -7,7 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-public class NumberTextWatcher implements TextWatcher {
+public class zNumberTextWatcher implements TextWatcher {
 
     private DecimalFormat df;
     private DecimalFormat dfnd;
@@ -15,7 +15,7 @@ public class NumberTextWatcher implements TextWatcher {
 
     private EditText et;
 
-    public NumberTextWatcher(EditText et)
+    public zNumberTextWatcher(EditText et)
     {
         df = new DecimalFormat("#,###.##");
         df.setDecimalSeparatorAlwaysShown(true);
@@ -25,7 +25,7 @@ public class NumberTextWatcher implements TextWatcher {
     }
 
     @SuppressWarnings("unused")
-    private static final String TAG = "NumberTextWatcher";
+    private static final String TAG = "zNumberTextWatcher";
 
     @Override
     public void afterTextChanged(Editable s)

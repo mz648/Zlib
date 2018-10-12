@@ -15,29 +15,9 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
-public class clsMsg {
+public class zMsg {
 
-    public static void msg_toast(Activity activity,String msg){
-
-        LayoutInflater inflater =activity.getLayoutInflater();
-
-        View layout = inflater.inflate(R.layout.custom_toast,
-                (ViewGroup) activity.findViewById(R.id.custom_toast_layout_id));
-
-        TextView text = (TextView) layout.findViewById(R.id.text);
-        text.setText(msg);
-        clsDsg.setFace_textview(activity, clsDsg.fonts.iran_yekan,text);
-
-        Toast toast = new Toast(activity);
-        toast.setGravity(Gravity.BOTTOM, 0, 20);
-        toast.setDuration(Toast.LENGTH_SHORT);
-        toast.setView(layout);
-        toast.show();
-    }
-
-    public static void msg_toast_short(Activity activity,String msg){
-
-//        Toast.makeText(clsVars_foods.context,msg,Toast.LENGTH_SHORT).show();
+    public static void msg_toast(Activity activity,boolean is_short,String msg){
 
         LayoutInflater inflater =activity.getLayoutInflater();
 
@@ -46,18 +26,20 @@ public class clsMsg {
 
         TextView text = (TextView) layout.findViewById(R.id.text);
         text.setText(msg);
-        clsDsg.setFace_textview(activity,"",text);
+        zDsg.setFace_textview(activity, zDsg.fonts.iran_yekan,text);
 
         Toast toast = new Toast(activity);
         toast.setGravity(Gravity.BOTTOM, 0, 20);
-        toast.setDuration(Toast.LENGTH_SHORT);
+        if(is_short)
+            toast.setDuration(Toast.LENGTH_SHORT);
+        else
+            toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
     }
+
 
     public static void msg_dialog(Activity activity, String msg){
-
-
 
         AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
         alertDialog.setMessage(msg);
@@ -71,9 +53,7 @@ public class clsMsg {
 
 
     }
-    public static void msg_dialog2(Activity activity,String title, String msg){
-
-
+    public static void msg_dialog(Activity activity,String title, String msg){
 
         AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
         alertDialog.setMessage(msg);
@@ -88,23 +68,7 @@ public class clsMsg {
 
 
     }
-
-    public static void wait_dialog (Activity activity,MaterialDialog dialog,String msg){
-
-        if(msg.equals(""))
-            msg="لطفا کمی صبر کنید ...";
-
-
-        dialog=new MaterialDialog.Builder(activity)
-                .cancelable(false).content(msg)
-                .progress(true,0)
-                .build();
-
-
-
-    }
-
-    public static void custome_msg_dialog(Activity activity,String title,String dess){
+    public static void msg_dialog_custome(Activity activity,String title,String dess){
 
         try{
             final MaterialDialog dialog= new MaterialDialog.Builder(activity)
@@ -127,16 +91,32 @@ public class clsMsg {
                 }
             });
 
-            clsDsg.setFace_textview(activity, clsDsg.fonts.iran_yekan,txt_dess,txt_title);
-            clsDsg.setFace_button(activity, clsDsg.fonts.b_yekan,btn_ok);
+            zDsg.setFace_textview(activity, zDsg.fonts.iran_yekan,txt_dess,txt_title);
+            zDsg.setFace_button(activity, zDsg.fonts.b_yekan,btn_ok);
             txt_dess.setText(dess);
             txt_title.setText(title);
 
             dialog.show();
         }
         catch(Exception e){
-            msg_toast(activity,e.getMessage());
+            msg_toast(activity,true,e.getMessage());
         }
+    }
+
+    public static void wait_dialog (Activity activity,MaterialDialog dialog,String msg){
+
+        if(msg.equals(""))
+            msg="لطفا کمی صبر کنید ...";
+
+
+        dialog=new MaterialDialog.Builder(activity)
+                .cancelable(false).content(msg)
+                .progress(true,0)
+                .build();
+
+    }
+    public static MaterialDialog wait_dialog(Activity activity){
+        return new MaterialDialog.Builder(activity).content("لطفا صبر کنید...").cancelable(false).progress(true,0).build();
     }
 
     public static void alter_try(final Runnable runnable, Activity activity,String msg){
@@ -160,8 +140,6 @@ public class clsMsg {
         });
         alert.create().show();
     }
-    public static MaterialDialog wait_dialog(Activity activity){
-        return new MaterialDialog.Builder(activity).content("لطفا صبر کنید...").cancelable(false).progress(true,0).build();
-    }
+
 
 }

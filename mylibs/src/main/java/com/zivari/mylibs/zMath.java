@@ -1,6 +1,6 @@
 package com.zivari.mylibs;
 
-public class clsMath {
+public class zMath {
 
     public  static String  digit_seprator(String num){
         String price_str;

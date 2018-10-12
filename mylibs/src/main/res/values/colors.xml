@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="color_blue">#2609e1</color>
+    <color name="color_blue2">#2043a3</color>
     <color name="color_blue_light">#097cc4</color>
     <color name="color_gray">#e6e5e5</color>
     <color name="color_ar">#ab077f</color>
@@ -24,7 +25,7 @@
     <color name="edit_white">#ffffff</color>
     <color name="edit_hint">#868686</color>
 
-    <color name="color_rvl_main">#71168c</color>
+    <color name="color_purple">#71168c</color>
 
     <color name="color_rvl_present">#034e1a</color>
     <color name="color_rvl_abs">#990621</color>

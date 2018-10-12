@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="myTextView">
+    <declare-styleable name="zTextView">
 
         <attr name="font_name" format="enum">
             <enum name="iran_yekan" value="0"/>
@@ -16,7 +16,7 @@
 
     </declare-styleable>
 
-    <declare-styleable name="myEditText">
+    <declare-styleable name="zEditText">
 
         <attr name="edt_font_name" format="enum">
             <enum name="iran_yekan" value="0"/>
@@ -32,7 +32,7 @@
     </declare-styleable>
 
 
-    <declare-styleable name="myButton">
+    <declare-styleable name="zButton">
 
         <attr name="button_font_name" format="enum">
             <enum name="iran_yekan" value="0"/>
@@ -44,7 +44,7 @@
 
     </declare-styleable>
 
-    <declare-styleable name="myImageView" >
+    <declare-styleable name="zImageView" >
         <attr name="set_tint_color" format="boolean"/>
         <attr name="tint_color" format="color"/>
     </declare-styleable>

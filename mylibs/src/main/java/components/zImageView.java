@@ -3,26 +3,23 @@ package components;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
 import com.zivari.mylibs.R;
 
-public class myImageView extends android.support.v7.widget.AppCompatImageView {
-    public myImageView(Context context) {
+public class zImageView extends android.support.v7.widget.AppCompatImageView {
+    public zImageView(Context context) {
         super(context);
         init(null);
     }
 
-    public myImageView(Context context, @Nullable AttributeSet attrs) {
+    public zImageView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public myImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public zImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(attrs);
     }
@@ -32,7 +29,7 @@ public class myImageView extends android.support.v7.widget.AppCompatImageView {
         if(attrs==null)
             return;
 
-        TypedArray typedArray=getContext().obtainStyledAttributes(attrs, R.styleable.myImageView);
+        TypedArray typedArray=getContext().obtainStyledAttributes(attrs, R.styleable.zImageView);
 
         set_tint_color(typedArray);
 
@@ -41,7 +38,7 @@ public class myImageView extends android.support.v7.widget.AppCompatImageView {
 
     void set_tint_color(TypedArray typedArray){
 
-        String _set_tint_color=typedArray.getString(R.styleable.myImageView_set_tint_color);
+        String _set_tint_color=typedArray.getString(R.styleable.zImageView_set_tint_color);
         if(_set_tint_color==null || _set_tint_color.equals("") )
             return;
 
@@ -49,7 +46,7 @@ public class myImageView extends android.support.v7.widget.AppCompatImageView {
         if(set_tint_color==false)
             return;
 
-        String tint_color=typedArray.getString(R.styleable.myImageView_tint_color);
+        String tint_color=typedArray.getString(R.styleable.zImageView_tint_color);
         if(tint_color==null || tint_color.equals("") )
             return;
 

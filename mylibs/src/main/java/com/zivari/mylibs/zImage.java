@@ -13,7 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-public class clsImage {
+public class zImage {
 
     public static Bitmap bitmap_resized(Bitmap image, int maxWidth, int maxHeight) {
         int width = image.getWidth();

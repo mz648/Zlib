@@ -1,4 +1,4 @@
-package com.zivari.mylibs;
+package components;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -10,7 +10,6 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -22,11 +21,10 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.widget.ImageView;
 import android.widget.OverScroller;
 import android.widget.Scroller;
 
-public class TouchImageView extends android.support.v7.widget.AppCompatImageView {
+public class zTouchImageView extends android.support.v7.widget.AppCompatImageView {
 
     private static final String DEBUG = "DEBUG";
 
@@ -86,17 +84,17 @@ public class TouchImageView extends android.support.v7.widget.AppCompatImageView
     private OnTouchListener userTouchListener = null;
     private OnTouchImageViewListener touchImageViewListener = null;
 
-    public TouchImageView(Context context) {
+    public zTouchImageView(Context context) {
         super(context);
         sharedConstructing(context);
     }
 
-    public TouchImageView(Context context, AttributeSet attrs) {
+    public zTouchImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         sharedConstructing(context);
     }
 
-    public TouchImageView(Context context, AttributeSet attrs, int defStyle) {
+    public zTouchImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         sharedConstructing(context);
     }
@@ -390,7 +388,7 @@ public class TouchImageView extends android.support.v7.widget.AppCompatImageView
      * Set zoom parameters equal to another TouchImageView. Including scale, position,
      * and ScaleType.
      */
-    public void setZoom(TouchImageView img) {
+    public void setZoom(zTouchImageView img) {
         PointF center = img.getScrollPosition();
         setZoom(img.getCurrentZoom(), center.x, center.y, img.getScaleType());
     }
