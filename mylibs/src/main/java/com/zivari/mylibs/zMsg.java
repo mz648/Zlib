@@ -37,6 +37,24 @@ public class zMsg {
         toast.setView(layout);
         toast.show();
     }
+    public static void msg_toast(Activity activity,String msg){
+
+        LayoutInflater inflater =activity.getLayoutInflater();
+
+        View layout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) activity.findViewById(R.id.custom_toast_layout_id));
+
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(msg);
+        zDsg.setFace_textview(activity, zDsg.fonts.iran_yekan,text);
+
+        Toast toast = new Toast(activity);
+        toast.setGravity(Gravity.BOTTOM, 0, 20);
+
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
+    }
 
 
     public static void msg_dialog(Activity activity, String msg){
