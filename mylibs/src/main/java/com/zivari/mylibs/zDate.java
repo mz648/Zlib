@@ -52,7 +52,7 @@ public class zDate {
             final NumberPicker numberPicker_day = (NumberPicker) dialog_date.findViewById(R.id.number_picker_day);
 
             numberPicker_year.setMaxValue(1400);
-            numberPicker_year.setMinValue(1396);
+            numberPicker_year.setMinValue(1340);
             numberPicker_year.setValue( Integer.parseInt(date_arr[0]));
             numberPicker_year.setWrapSelectorWheel(true);
 
